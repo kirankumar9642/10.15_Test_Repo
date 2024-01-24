@@ -13,8 +13,9 @@ pipeline {
             }
         }
         stage('Deploy') {
+	
             steps {
-		sh "/opt/CICD/tools/hudson.tasks.Ant_AntInstallation/ANT_HOME/bin/ant -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} -DTARGET_HOST=${parms.TARGET_HOST} -DTARGET_PORT=${parms.TARGET_PORT} deploy"
+		sh "/opt/CICD/tools/hudson.tasks.Ant_AntInstallation/ANT_HOME/bin/ant -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} -DTARGET_HOST=${params.TARGET_HOST} -DTARGET_PORT=${params.TARGET_PORT} deploy"
             }
         }
 	stage('Test') {
