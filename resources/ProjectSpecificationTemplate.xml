@@ -9,17 +9,17 @@
  -->
 <DeployerSpec exitOnError="false" sourceType="Repository">
 	<DeployerServer>
-		<host>${deployerHost}:${deployerPort}</host>
+		<host>vmntx-rhljnjgroup3:5500</host>
 		<user>Administrator</user>
-		<pwd>${deployerPassword}</pwd>
+		<pwd>i1APwM2020_4JJ!St#</pwd>
 	</DeployerServer>
   <Environment>
 		<IS>
-			<isalias name=$aliasName>
-				<host>$testISHost</host>
-				<port>$testISPort</port>
+			<isalias name=IS_ALIAS_vmntx_rhljnjgroup5_PIPELINE>
+				<host>vmntx_rhljnjgroup5</host>
+				<port>5500</port>
 				<user>Administrator</user>
-				<pwd>$testISPassword</pwd>
+				<pwd>i1APwM2020_4JJ!St#</pwd>
 				<useSSL>false</useSSL>
 				<installDeployerResource>false</installDeployerResource>
 				<Test>true</Test>
