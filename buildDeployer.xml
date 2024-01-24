@@ -54,7 +54,7 @@
 	<target name = "cleanupDeployerSpec">	
 		<delete file="${deployerProjectDefinition}" />
 	</target>
-	<echo message=" Check host name ${parms.TARGET_HOST}" />
+	<echo message=" Check host name ${TARGET_HOST}" />
 	<target name="setupDeployerSpec" description="Creates the project automator xml with XSLT based on the given variables.">				
 		<xslt style="${initialXSLT}" in="${deployerProjectDefinitionTemplate}" out="${deployerProjectDefinition}">
 			<!--build/deployer server props -->
@@ -65,12 +65,12 @@
 			
 			<!--target server props -->
 			<param name="testISHost" expression="${TARGET_HOST}" />
-			<param name="testISPort" expression="${parms.TARGET_PORT}" />
+			<param name="testISPort" expression="${TARGET_PORT}" />
 			<param name="testISUsername" expression="${testISUsername}" />
 			<param name="testISPassword" expression="${testISPassword}" />
 			
 			<!-- general props -->
-			<param name="repoName" expression="IS_REPOSITORY_'${parms.TARGET_HOST}'" />
+			<param name="repoName" expression="IS_REPOSITORY_'${TARGET_HOST}'" />
 			<param name="repoPath" expression="${buildOutputDir}" />
 			<param name="projectName" expression="${projectName}" />				
 		</xslt>				
