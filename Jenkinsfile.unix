@@ -5,8 +5,8 @@ pipeline {
     stages {
         stage('Print Runtime String'){
 	    steps {
-                 echo "target server host ${parms.targetHost}"
-                 echo "target server port ${parms.targetPort}"
+                 sh "echo 'target server host ${parms.targetHost}'"
+                 sh "echo `target server port ${parms.targetPort}`"
 		  }
 		}
 	stage('Build'){
