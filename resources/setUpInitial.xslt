@@ -59,7 +59,6 @@
 					<user><xsl:value-of select="$testISUsername"/></user>
 					<pwd><xsl:value-of select="$testISPassword"/></pwd>
 					<useSSL>false</useSSL>
-					<installDeployerResource>true</installDeployerResource>
 					<Test>true</Test>
 				</isalias>
 			</IS>
@@ -100,7 +99,7 @@
 				
 				<DeploymentMap description="" name="myDeploymentMap"/>			
 				<MapSetMapping mapName="myDeploymentMap" setName="myDeploymentSet">								
-					<alias type="IS">testServer</alias>
+					<alias type="IS">${repositoryName}</alias>
 				</MapSetMapping>	
 				<DeploymentCandidate description="" mapName="myDeploymentMap" name="myDeployment"/>
 			</Project>
