@@ -36,7 +36,7 @@
 		</if>
 	</target>
 	
-	<target name="prepareABEproperties">			
+	<!-- <target name="prepareABEproperties">			
 		<if>
 			<not>
 				<available file="${abeHome}/${abeBuildfileDir}/build.properties.original" type="file"/>
@@ -49,7 +49,7 @@
 				
 		<!-- move build.properties from SVN to the target ABE folder -->
 		<copy file="${abeBuildPropertiesReference}" tofile="${abeHome}/${abeBuildfileDir}/build.properties" overwrite="true"/>		
-	</target>
+	</target> -->
 	
 	
 </project>
