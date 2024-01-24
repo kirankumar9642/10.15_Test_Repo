@@ -1,11 +1,6 @@
 pipeline {
     agent {label 'Group3_VM'}
 
-   parameters {
-        string(name: 'TARGET_HOST, description: 'Enter Target Host Name')
-        string(name: 'TARGET_PORT', description: 'Enter target IS port')
-    }
-
     stages {
         stage('Build'){
             steps {
