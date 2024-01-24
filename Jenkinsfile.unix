@@ -1,6 +1,11 @@
 pipeline {
     agent {label 'Group3_VM'}
 
+    parameters{
+   	string(defaultValue: 'vmntx-rhljnjgroup5', name: 'TARGET_HOST')
+	string(defaultValue: '5500', name: 'TARGET_PORT')
+	}
+
     stages {
 	stage('Build'){
             steps {
