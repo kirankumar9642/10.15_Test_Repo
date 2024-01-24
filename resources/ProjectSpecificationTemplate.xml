@@ -8,7 +8,6 @@
     Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.                                                            
  -->
 
-<property name="IS" value="System.properties"/>
 
 <DeployerSpec exitOnError="false" sourceType="Repository">
 	<DeployerServer>
@@ -18,9 +17,9 @@
 	</DeployerServer>
   <Environment>
 		<IS>
-			<isalias name="${repositoryName}">
-				<host>${testISHost}</host>
-				<port>${testISPort}</port>
+			<isalias name="IS_REPOSITORY_${targetHost}">
+				<host>${targetHost}</host>
+				<port>${targetPort}</port>
 				<user>Administrator</user>
 				<pwd>${testISPassword}</pwd>
 				<useSSL>false</useSSL>
@@ -55,18 +54,7 @@
 				<Test>true</Test>
 			</mwsalias>
 		</MWS>
-		<RulesServer>
-			<rulesserveralias name="target">
-				<host>localhost</host>
-				<port>5555</port>
-				<user>Administrator</user>
-				<pwd>{AES}Y5IgMqjfvkgbg7p5VUZztw==</pwd>
-				<useSSL>false</useSSL>
-				<Test>true</Test>
-			</rulesserveralias>
-		</RulesServer-->		
-		<Repository>
-		</Repository>	
+
 	</Environment>
 	
 	<Projects>
