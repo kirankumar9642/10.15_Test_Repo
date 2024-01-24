@@ -33,7 +33,7 @@
 	<xsl:param name="testISPassword"/>
 	
 	<xsl:param name="repoName"/>
-	<xsl:param name="aliasName"/>
+	<isalias name=$aliasName>
 	<xsl:param name="repoPath"/>
 	<xsl:param name="projectName"/>
 		
@@ -54,7 +54,7 @@
 	<xsl:template match="DeployerSpec/Environment">
 	    <Environment>
 			<IS>
-				<isalias name="IS_ALIAS_'$testISHost'">
+				<isalias name=$aliasName>
 					<host><xsl:value-of select="$testISHost"/></host>
 					<port><xsl:value-of select="$testISPort"/></port>
 					<user><xsl:value-of select="$testISUsername"/></user>
@@ -101,7 +101,7 @@
 				
 				<DeploymentMap description="" name="myDeploymentMap"/>			
 				<MapSetMapping mapName="myDeploymentMap" setName="myDeploymentSet">								
-					<alias type="IS">"$IS_ALIAS_'$testISHost'"</alias>
+					<alias type="IS">$aliasName</alias>
 				</MapSetMapping>	
 				<DeploymentCandidate description="" mapName="myDeploymentMap" name="myDeployment"/>
 			</Project>
