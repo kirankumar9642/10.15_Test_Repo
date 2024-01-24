@@ -51,13 +51,8 @@
 	<target name="createDeployerSpec" depends="cleanupDeployerSpec,setupDeployerSpec">		
 	</target>
 	
-	<target name="cleanupDeployerSpec">
-		<if>
-			<available file="${deployerProjectDefinition}"/>
-			<then>
-				<delete file="${deployerProjectDefinition}"/>	
-			</then>
-		</if>	
+	<target name = "cleanupDeployerSpec">	
+		<delete file="${deployerProjectDefinition}" />
 	</target>
 	
 	<target name="setupDeployerSpec" description="Creates the project automator xml with XSLT based on the given variables.">				
