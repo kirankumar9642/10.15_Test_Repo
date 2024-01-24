@@ -54,7 +54,7 @@
 	<xsl:template match="DeployerSpec/Environment">
 	    <Environment>
 			<IS>
-				<isalias name=<xsl:value-of select="$aliasName"/>>
+				<xsl:attribute name="isalias name"><xsl:value-of select="$aliasName"/></xsl:attribute>>
 					<host><xsl:value-of select="$testISHost"/></host>
 					<port><xsl:value-of select="$testISPort"/></port>
 					<user><xsl:value-of select="$testISUsername"/></user>
