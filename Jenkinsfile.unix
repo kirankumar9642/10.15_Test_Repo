@@ -4,7 +4,6 @@ pipeline {
         parameters{
 		string(defaultValue: 'vmntx-rhljnjgroup5', name: 'targetHost')
 		string(defaultValue: '5500', name: 'targetPort')
-		}
 
 	stage('Build'){
             steps {
