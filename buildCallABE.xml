@@ -28,12 +28,12 @@
 	
 	<target name="cleanupBuild">			
 		<if>
-			<available file="${buildOutputDir}" type="dir"/>
+			<!--<available file="${buildOutputDir}" type="dir"/>
 			<then>
 				<delete includeemptydirs="true">
 					<fileset dir="${buildOutputDir}" includes="**/*"/>
 				</delete>	
-			</then>
+			</then>-->
 		</if>
 	</target>
 	
