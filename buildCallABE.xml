@@ -24,7 +24,8 @@
 		<ant antfile="${abeBuildfileFile}" dir="${abeHome}/${abeBuildfileDir}" target="build"/>
 	</target>
 	
-	<target name="cleanupBuild">			
+	<target name = "cleanupBuild">	
+		<delete dir="$buildOutputDir}" />
 	</target>
 	
 	<target name="prepareABEproperties">
