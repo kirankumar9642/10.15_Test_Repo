@@ -17,9 +17,9 @@
 	</DeployerServer>
   <Environment>
 		<IS>
-			<isalias name="IS_REPOSITORY_${targetHost}">
-				<host>${targetHost}</host>
-				<port>${targetPort}</port>
+			<isalias name="IS_REPOSITORY_${params.targetHost}">
+				<host>${params.targetHost}</host>
+				<port>${params.targetPort}</port>
 				<user>Administrator</user>
 				<pwd>${testISPassword}</pwd>
 				<useSSL>false</useSSL>
