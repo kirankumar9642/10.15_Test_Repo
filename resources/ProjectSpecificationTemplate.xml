@@ -15,11 +15,11 @@
 	</DeployerServer>
   <Environment>
 		<IS>
-			<isalias name="${repositoryName}">
-				<host>${testISHost}</host>
-				<port>${testISPort}</port>
+			<isalias name="$aliasName">
+				<host>$testISHost</host>
+				<port>$testISPort</port>
 				<user>Administrator</user>
-				<pwd>${testISPassword}</pwd>
+				<pwd>$testISPassword</pwd>
 				<useSSL>false</useSSL>
 				<installDeployerResource>false</installDeployerResource>
 				<Test>true</Test>
