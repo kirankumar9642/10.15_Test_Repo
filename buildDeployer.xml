@@ -54,7 +54,7 @@
 	<target name = "cleanupDeployerSpec">	
 		<delete file="${deployerProjectDefinition}" />
 	</target>
-	<echo message=" Check host name ${parms.TARGET_HOST" />
+	<echo message=" Check host name ${parms.TARGET_HOST}" />
 	<target name="setupDeployerSpec" description="Creates the project automator xml with XSLT based on the given variables.">				
 		<xslt style="${initialXSLT}" in="${deployerProjectDefinitionTemplate}" out="${deployerProjectDefinition}">
 			<!--build/deployer server props -->
