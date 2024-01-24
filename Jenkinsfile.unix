@@ -4,7 +4,7 @@ pipeline {
         parameters{
 		string(defaultValue: 'vmntx-rhljnjgroup5', name: 'targetHost')
 		string(defaultValue: '5500', name: 'targetPort')
-
+		}
 	stage('Build'){
             steps {
                 sh "/opt/CICD/tools/hudson.tasks.Ant_AntInstallation/ANT_HOME/bin/ant -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} build"
@@ -21,5 +21,4 @@ pipeline {
 		junit 'report/'
             }
         }
-    }
 }
