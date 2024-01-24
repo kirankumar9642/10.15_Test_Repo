@@ -60,7 +60,7 @@
 					<user><xsl:value-of select="$testISUsername"/></user>
 					<pwd><xsl:value-of select="$testISPassword"/></pwd>
 					<useSSL>false</useSSL>
-					<installDeployerResource>true</installDeployerResource>
+					<installDeployerResource>false</installDeployerResource>
 					<Test>true</Test>
 				</isalias>
 			</IS>
