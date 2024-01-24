@@ -15,7 +15,7 @@
 	<property name="deployerProjectDefinitionTemplate" value="resources/ProjectSpecificationTemplate.xml"/>
 	
 	<!-- Target filename of the Deployer Project Specification for this run -->
-	<property name="deployerProjectDefinition" value="${workspace.dir}/ProjectAutomator/${projectName}DeploymentSpec.xml"/>
+	<property name="deployerProjectDefinition" value="${buildOutputDir}/ProjectAutomator/${projectName}DeploymentSpec.xml"/>
 	
 	<!-- XSLT for the Deployer Project Specification - adding Repository and Project Sections -->
 	<property name="initialXSLT" value="resources/setUpInitial.xslt"/>
