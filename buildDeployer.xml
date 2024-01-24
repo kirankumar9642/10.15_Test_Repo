@@ -69,10 +69,9 @@
 			<param name="testISPassword" expression="${testISPassword}" />
 			
 			<!-- general props -->
-			<param name="repoName" expression="IS_REPOSITORY_'${TARGET_HOST}'" />
-			<param name="aliasName" expression="IS_ALIAS_'${TARGET_HOST}'" />
+			<param name="repoName" expression="IS_REPOSITORY_'${TARGET_HOST}'" />			
 			<param name="repoPath" expression="${buildOutputDir}" />
-			<param name="projectName" expression="${projectName}" />				
+			<param name="projectName" expression="${projectName}" />
 		</xslt>				
 	</target>
 	
