@@ -21,7 +21,7 @@
 				<user>Administrator</user>
 				<pwd>${testISPassword}</pwd>
 				<useSSL>false</useSSL>
-				<installDeployerResource>true</installDeployerResource>
+				<installDeployerResource>false</installDeployerResource>
 				<Test>true</Test>
 			</isalias>
 		</IS>
