@@ -64,7 +64,7 @@
 			<param name="deployerPassword" expression="${deployerPassword}" />
 			
 			<!--target server props -->
-			<param name="testISHost" expression="${parms.TARGET_HOST}" />
+			<param name="testISHost" expression="${TARGET_HOST}" />
 			<param name="testISPort" expression="${parms.TARGET_PORT}" />
 			<param name="testISUsername" expression="${testISUsername}" />
 			<param name="testISPassword" expression="${testISPassword}" />
