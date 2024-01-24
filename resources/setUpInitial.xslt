@@ -35,7 +35,6 @@
 	<xsl:param name="repoName"/>
 	<xsl:param name="repoPath"/>
 	<xsl:param name="projectName"/>
-	<xsl:param name="aliasName"/>
 		
 	<xsl:template match="@*|node()">
 		<xsl:copy>
@@ -54,13 +53,13 @@
 	<xsl:template match="DeployerSpec/Environment">
 	    <Environment>
 			<IS>
-				<xsl:attribute name="isalias name"><xsl:value-of select="$aliasName"/></xsl:attribute>>
+				<isalias name="IS_ALIAS_vmntx_rhljnjgroup5_PIPELINE">
 					<host><xsl:value-of select="$testISHost"/></host>
 					<port><xsl:value-of select="$testISPort"/></port>
 					<user><xsl:value-of select="$testISUsername"/></user>
 					<pwd><xsl:value-of select="$testISPassword"/></pwd>
 					<useSSL>false</useSSL>
-					<installDeployerResource>false</installDeployerResource>
+					<installDeployerResource>true</installDeployerResource>
 					<Test>true</Test>
 				</isalias>
 			</IS>
@@ -101,7 +100,7 @@
 				
 				<DeploymentMap description="" name="myDeploymentMap"/>			
 				<MapSetMapping mapName="myDeploymentMap" setName="myDeploymentSet">								
-					<alias type="IS"><xsl:value-of select="$aliasName"/></alias>
+					<alias type="IS">IS_ALIAS_vmntx_rhljnjgroup5_PIPELINE</alias>
 				</MapSetMapping>	
 				<DeploymentCandidate description="" mapName="myDeploymentMap" name="myDeployment"/>
 			</Project>
