@@ -15,7 +15,7 @@
 	</DeployerServer>
   <Environment>
 		<IS>
-			<isalias name="IS_ALIAS_'$testISHost'">
+			<isalias name=IS_ALIAS_$testISHost>
 				<host>$testISHost</host>
 				<port>$testISPort</port>
 				<user>Administrator</user>
