@@ -53,9 +53,9 @@
 	<xsl:template match="DeployerSpec/Environment">
 	    <Environment>
 			<IS>
-				<isalias name="IS_ALIAS_$testISHost">
-					<host><xsl:value-of select="$testISHost"/></host>
-					<port><xsl:value-of select="$testISPort"/></port>
+				<isalias name="IS_ALIAS_${testISHost}">
+					<host><xsl:value-of select="${testISHost}"/></host>
+					<port><xsl:value-of select="${testISPort}"/></port>
 					<user><xsl:value-of select="$testISUsername"/></user>
 					<pwd><xsl:value-of select="$testISPassword"/></pwd>
 					<useSSL>false</useSSL>
@@ -100,7 +100,7 @@
 				
 				<DeploymentMap description="" name="myDeploymentMap"/>			
 				<MapSetMapping mapName="myDeploymentMap" setName="myDeploymentSet">								
-					<alias type="IS">IS_ALIAS_$testISHost</alias>
+					<alias type="IS">IS_ALIAS_${testISHost}</alias>
 				</MapSetMapping>	
 				<DeploymentCandidate description="" mapName="myDeploymentMap" name="myDeployment"/>
 			</Project>
