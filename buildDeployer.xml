@@ -64,13 +64,13 @@
 			<param name="deployerPassword" expression="${deployerPassword}" />
 			
 			<!--target server props -->
-			<param name="testISHost" expression="${targetHost}" />
-			<param name="testISPort" expression="${targetPort}" />
+			<param name="testISHost" expression="${parms.targetHost}" />
+			<param name="testISPort" expression="${parms.targetPort}" />
 			<param name="testISUsername" expression="${testISUsername}" />
 			<param name="testISPassword" expression="${testISPassword}" />
 			
 			<!-- general props -->
-			<param name="repoName" expression="IS_REPOSITORY_${targetHost}" />
+			<param name="repoName" expression="IS_REPOSITORY_${parms.targetHost}" />
 			<param name="repoPath" expression="${buildOutputDir}" />
 			<param name="projectName" expression="${projectName}" />				
 		</xslt>				
