@@ -53,9 +53,9 @@
 	<xsl:template match="DeployerSpec/Environment">
 	    <Environment>
 			<IS>
-				<isalias name="${repositoryName}">
-					<host><xsl:value-of select="$testISHost"/></host>
-					<port><xsl:value-of select="$testISPort"/></port>
+				<isalias name="IS_ALIAS_${params.targetHost}">
+					<host><xsl:value-of select="${params.targetHost}"/></host>
+					<port><xsl:value-of select="${params.targetPort}"/></port>
 					<user><xsl:value-of select="$testISUsername"/></user>
 					<pwd><xsl:value-of select="$testISPassword"/></pwd>
 					<useSSL>false</useSSL>
@@ -73,7 +73,7 @@
 			<xsl:apply-templates select="@* | *" />
 			
 			<repalias>
-			<xsl:attribute name="name"><xsl:value-of select="$repoName"/></xsl:attribute>
+			<xsl:attribute name="name"><xsl:value-of select="IS_REPOSITORY_${params.targetHost}"/></xsl:attribute>
 				<type>FlatFile</type>
 				<urlOrDirectory><xsl:value-of select="$repoPath"/></urlOrDirectory>
 				<Test>true</Test>
@@ -100,7 +100,7 @@
 				
 				<DeploymentMap description="" name="myDeploymentMap"/>			
 				<MapSetMapping mapName="myDeploymentMap" setName="myDeploymentSet">								
-					<alias type="IS">${repositoryName}</alias>
+					<alias type="IS">IS_REPOSITORY_${params.targetHost}</alias>
 				</MapSetMapping>	
 				<DeploymentCandidate description="" mapName="myDeploymentMap" name="myDeployment"/>
 			</Project>
